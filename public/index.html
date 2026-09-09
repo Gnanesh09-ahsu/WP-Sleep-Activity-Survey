@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Student Sleep Habits Survey</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="header">
+        <h1>Student Sleep Habits Survey</h1>
+        <p>
+            Help us understand sleeping patterns and habits
+            among students.
+        </p>
+    </div>
+
+    <form id="surveyForm">
+
+        <!-- BASIC INFORMATION -->
+
+        <h2>Basic Information</h2>
+
+        <label>Name</label>
+        <input type="text" id="name" placeholder="Enter your name">
+
+        <label>Age *</label>
+        <input type="number" id="age" min="15" max="100" required>
+
+        <label>Course / Year *</label>
+        <input
+            type="text"
+            id="course"
+            placeholder="Example: BCA 2nd Year"
+            required
+        >
+
+        <label>Phone Number *</label>
+        <input
+            type="tel"
+            id="phone"
+            placeholder="10-digit mobile number"
+            maxlength="10"
+            required
+        >
+
+        <small>
+            Your phone number is being collected for this survey
+            and will be handled according to the survey's stated purpose.
+        </small>
+
+
+        <!-- SLEEP INFORMATION -->
+
+        <h2>Sleep Information</h2>
+
+        <label>Average sleeping hours *</label>
+
+        <div class="options">
+            <label><input type="radio" name="sleepHours" value="Less than 5 hours" required> Less than 5 hours</label>
+            <label><input type="radio" name="sleepHours" value="5-6 hours"> 5–6 hours</label>
+            <label><input type="radio" name="sleepHours" value="6-7 hours"> 6–7 hours</label>
+            <label><input type="radio" name="sleepHours" value="7-8 hours"> 7–8 hours</label>
+            <label><input type="radio" name="sleepHours" value="More than 8 hours"> More than 8 hours</label>
+        </div>
+
+
+        <label>How would you rate your sleep quality? *</label>
+
+        <div class="options">
+            <label><input type="radio" name="sleepQuality" value="Very Poor" required> Very Poor</label>
+            <label><input type="radio" name="sleepQuality" value="Poor"> Poor</label>
+            <label><input type="radio" name="sleepQuality" value="Average"> Average</label>
+            <label><input type="radio" name="sleepQuality" value="Good"> Good</label>
+            <label><input type="radio" name="sleepQuality" value="Very Good"> Very Good</label>
+        </div>
+
+
+        <label>How often do you use your phone before sleeping?</label>
+
+        <select id="phoneBeforeSleep">
+            <option value="">Select</option>
+            <option>Never</option>
+            <option>Rarely</option>
+            <option>Sometimes</option>
+            <option>Often</option>
+            <option>Always</option>
+        </select>
+
+
+        <label>How often do you feel sleepy during classes?</label>
+
+        <select id="sleepyInClass">
+            <option value="">Select</option>
+            <option>Never</option>
+            <option>Rarely</option>
+            <option>Sometimes</option>
+            <option>Often</option>
+            <option>Always</option>
+        </select>
+
+
+        <label>Do you have difficulty falling asleep?</label>
+
+        <select id="sleepDifficulty">
+            <option value="">Select</option>
+            <option>Never</option>
+            <option>Rarely</option>
+            <option>Sometimes</option>
+            <option>Often</option>
+            <option>Always</option>
+        </select>
+
+
+        <label>What usually affects your sleep?</label>
+
+        <div class="options">
+
+            <label>
+                <input type="checkbox" name="sleepFactors" value="Academic workload">
+                Academic workload
+            </label>
+
+            <label>
+                <input type="checkbox" name="sleepFactors" value="Mobile/Social Media">
+                Mobile / Social Media
+            </label>
+
+            <label>
+                <input type="checkbox" name="sleepFactors" value="Stress">
+                Stress
+            </label>
+
+            <label>
+                <input type="checkbox" name="sleepFactors" value="Gaming/Entertainment">
+                Gaming / Entertainment
+            </label>
+
+            <label>
+                <input type="checkbox" name="sleepFactors" value="Caffeine">
+                Caffeine
+            </label>
+
+            <label>
+                <input type="checkbox" name="sleepFactors" value="Part-time Work">
+                Part-time Work
+            </label>
+
+        </div>
+
+
+        <label>
+            Do you think your sleeping habits affect your academic performance?
+        </label>
+
+        <select id="academicEffect">
+            <option value="">Select</option>
+            <option>Yes</option>
+            <option>No</option>
+            <option>Not Sure</option>
+        </select>
+
+
+        <label>Additional comments</label>
+
+        <textarea
+            id="comments"
+            rows="4"
+            placeholder="Write anything you would like to share..."
+        ></textarea>
+
+
+        <!-- CONSENT -->
+
+        <div class="consent">
+
+            <label>
+                <input type="checkbox" id="consent" required>
+
+                I understand that my phone number and survey responses
+                will be collected for this survey and used only for the
+                stated survey purpose.
+            </label>
+
+        </div>
+
+
+        <button type="submit">
+            Submit Response
+        </button>
+
+        <p id="message"></p>
+
+    </form>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
